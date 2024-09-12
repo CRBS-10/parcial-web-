@@ -1,0 +1,424 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header (Barra de Navegación) */
+header {
+    background-color: rgba(6, 6, 6, 0.8); /* color1 con 80% de opacidad */
+    color: #bcb9ab; /* color5 para el texto */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+.logo {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding-left: 20px; /* Añade espacio a la izquierda */
+}
+
+.logo h1 {
+    margin: 0 0 0 10px; /* Margen entre el logo y el texto */
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 60px 20px;
+    min-height: 100vh; /* Asegura que ocupe al menos toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+#home {
+    background-image: url('Img/pexels-donaldtong94-23474.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 10% 5%; /* Padding en porcentajes para que se ajuste automáticamente */
+    min-height: 80vh; /* Ajusta la altura mínima a un porcentaje del viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    align-items: center; /* Centra el contenido horizontalmente */
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente Montserrat */
+}
+
+
+#benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.benefit-cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    gap: 20px; /* Espacio entre las tarjetas */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor de las tarjetas */
+    width: 100%; /* Asegura que el contenedor de las tarjetas se ajuste a la pantalla */
+}
+
+.benefit-card {
+    flex: 1 1 calc(33.333% - 40px); /* Las tarjetas ocupan un tercio del contenedor */
+    max-width: 300px; /* Limita el tamaño máximo de cada tarjeta */
+    min-width: 250px; /* Tamaño mínimo para evitar tarjetas demasiado pequeñas */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.benefit-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.benefit-card .benefit-detail {
+    color: #666;
+    display: none;
+}
+
+.benefit-card:hover {
+    transform: scale(1.05);
+    background-color: #f0f8ff;
+}
+
+.benefit-card:hover .benefit-detail {
+    display: block;
+    color: #000;
+}
+
+#features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    gap: 20px; /* Espacio entre las tarjetas */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor de las tarjetas */
+    width: 100%; /* Asegura que el contenedor de las tarjetas se ajuste a la pantalla */
+}
+
+.feature-card {
+    flex: 1 1 calc(33.333% - 40px); /* Las tarjetas ocupan un tercio del contenedor */
+    max-width: 300px; /* Limita el tamaño máximo de cada tarjeta */
+    min-width: 250px; /* Tamaño mínimo para evitar tarjetas demasiado pequeñas */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.feature-card .feature-detail {
+    color: #666;
+    display: none;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    background-color: #f0f8ff;
+}
+
+.feature-card:hover .feature-detail {
+    display: block;
+    color: #000;
+}
+
+
+
+/* Ajuste de la sección testimonial para que ocupe toda la pantalla */
+/* Sección Testimonios */
+#testimonials {
+    padding: 20px 0; /* Reduce el padding general de la sección */
+    background-color: #f9f9f9;
+    min-height: 50vh; /* Ajusta la altura mínima para que no sea tan alta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Contenedor del carrusel */
+/* Contenedor del carrusel */
+.testimonial-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ajusta el ancho máximo al 100% */
+    margin: 0 auto;
+    overflow: hidden; /* Asegura que solo se muestre un testimonio a la vez */
+}
+
+/* Slider de testimonios */
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Añade transición suave al mover */
+}
+
+/* Cada testimonio debe ocupar el 100% del ancho visible */
+.testimonial {
+    flex: 0 0 100%; /* Ocupa todo el ancho del contenedor */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo de las imágenes de los testimonios */
+.testimonial img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+/* Botones de navegación */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(51, 51, 51, 0.6); /* Fondo semi-transparente */
+    color: white;
+    border: none;
+    padding: 10px; /* Reduce el padding para que sean más pequeños */
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.prev-btn {
+    left: 0; /* Ajusta la distancia desde el borde izquierdo */
+}
+
+.next-btn {
+    right: 0; /* Ajusta la distancia desde el borde derecho */
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo más oscuro en hover */
+}
+
+#cta {
+    background-color: #fff201; /* Color de fondo */
+    color: black; /* Color del texto */
+    text-align: center;
+    padding: 60px 20px; /* Aumenta el padding interno para mayor altura */
+    width: 100%; /* Asegura que la sección cubra todo el ancho */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    min-height: 300px; /* Ajusta la altura mínima */
+}
+
+#cta h2 {
+    font-size: 28px; /* Tamaño de fuente ajustado */
+    margin: 0 0 15px; /* Ajusta el margen inferior */
+}
+
+#cta p {
+    font-size: 18px; /* Tamaño de fuente ajustado */
+    margin: 0 0 20px; /* Ajusta el margen inferior */
+}
+
+/* Botón de compra */
+.cta-button {
+    background-color: #231f20; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 12px 24px; /* Ajusta el padding para el botón */
+    text-decoration: none;
+    font-size: 1em; /* Tamaño de fuente ajustado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s;
+    display: inline-block; /* Asegura que el botón solo ocupe el espacio necesario */
+    width: auto; /* Evita que se expanda a lo largo */
+    text-align: center; /* Centra el texto dentro del botón */
+    margin: 10px auto; /* Centra el botón horizontalmente */
+}
+
+.cta-button:hover {
+    background-color: wheat; /* Color de fondo al pasar el ratón */
+}
+
+/* Sección de Contacto */
+#contact {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+/* Sección de contacto */
+#contact {
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Cambia el color de fondo si lo deseas */
+}
+
+.container {
+    width: 50%;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Ajusta los campos del formulario */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    #home {
+        padding: 15% 5%; /* Ajusta el padding para pantallas más pequeñas */
+    }
+}
